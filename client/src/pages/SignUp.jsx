@@ -26,7 +26,7 @@ const SignUp = () => {
       // console.log("res===",res)
       const data = await res.json();
       setLoading(false)
-      if(!data.success){
+      if(data.success == false){
         setError(true);
         return;
       }
@@ -71,7 +71,7 @@ const SignUp = () => {
           <span className="text-blue-500">Sign In</span>
         </Link>
       </div>
-      <p>{error && 'Something went wrong !!'}</p>
+      <p className="text-red-600 mt-5">{error && 'Something went wrong !!'}</p>
     </div>
   );
 };
