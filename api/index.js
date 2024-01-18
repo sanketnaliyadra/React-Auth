@@ -1,12 +1,14 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import cookieParser from 'cookie-parser';
 import userRoutes from './routes/userRoute.js'
 import authRoutes from './routes/authRoute.js'
 
 const app = express();
 // Allow JSON as input to backend
 app.use(express.json());
+app.use(cookieParser());
 dotenv.config();
 
 
